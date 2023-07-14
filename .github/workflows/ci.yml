@@ -72,11 +72,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('asssets/package-lock.json') }}
       - run: npm install --prefix assets
       - run: npm run lint --prefix assets
-      - run: sudo apt-get install xvfb
-      - run: |
-          xvfb-run --auto-servernum npm run test --prefix assets
-        env:
-          CI: true
+      - run: npm run test --prefix assets
 
   assets:
     needs: [check_js]
