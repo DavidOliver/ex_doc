@@ -1,3 +1,12 @@
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+
+export default defineConfig([
+	{
+  },
+]);
+
+/*
 module.exports = {
   env: {
     browser: true,
@@ -16,5 +25,12 @@ module.exports = {
     'no-throw-literal': 0,
     'no-useless-escape': 0,
     'object-curly-spacing': 0
-  }
+  },
+  ignorePatterns:[
+    "formatters/*",
+    "doc/*",
+    "test/*",
+    "deps/*"
+  ]
 }
+*/
